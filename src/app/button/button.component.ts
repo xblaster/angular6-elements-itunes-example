@@ -18,9 +18,11 @@ import {
       font-size: 20px;
     }
   `
-  ],
-  encapsulation: ViewEncapsulation.Native
+  ]
+  ,
+  encapsulation: ViewEncapsulation.Emulated
 })
+
 export class ButtonComponent {
   @Input() label = 'default label';
   @Output() action = new EventEmitter<number>();

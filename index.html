@@ -8,14 +8,17 @@
 </head>
 
 <body>
+  <p>Test custom element</p>
   <custom-button label="First Value"></custom-button>
+  <hr/>
 
   <script>
-    const button = document.querySelector('custom-button');
-    button.addEventListener('action', (event) => {
-      console.log(`"action" emitted: ${event.detail}`);
-    })
-    setTimeout(() => button.label = 'Second Value', 3000);
+    var button = document.querySelector('custom-button');
+    button.addEventListener('action', function (event) {
+      console.log("action emitted:", event.detail);
+    });
+    
+    setTimeout(function () { button.label = 'Second Value'}, 3000);
 
   </script>
 </body>
