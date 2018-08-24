@@ -1,0 +1,25 @@
+<form [formGroup]="form">
+
+  <mat-card>
+    <div fxLayout="row">
+      <mat-form-field appearance="outline" fxFlex class="search-input">
+          <mat-label>Recherche</mat-label>
+        <input matInput value="" formControlName="search">
+        <button type="button" mat-button matSuffix mat-icon-button aria-label="Clear" (click)="clear()">
+          <!--<mat-icon>close</mat-icon>-->
+          x
+        </button>
+
+      </mat-form-field>
+      <button mat-button color="primary">
+        <mat-icon *ngIf="!loading">search</mat-icon>
+        <mat-icon *ngIf="loading" class="spin">cached</mat-icon>
+      </button>
+    </div>
+    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+  </mat-card>
+
+
+</form>
+
+<!--{{ form.value | json }}-->

@@ -1,0 +1,28 @@
+mat-card {
+  padding: 0;
+  padding-left: 24pt;
+  padding-right: 0;
+  margin-bottom: 24pt;
+}
+
+mat-progress-bar {
+  margin-left: -24pt;
+  padding-right: 24pt;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.spin {
+  animation: spin 1000ms linear infinite;
+}
+
+.search-input {
+    padding-top: 16pt;
+}
